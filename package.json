@@ -1,0 +1,14 @@
+{
+  "name": "cloudflare-thread-exporter",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "wrangler dev",
+    "start": "np run dev",
+    "deploy": "wrangler publish",
+    "migrate": "echo 'No migrations required' "
+  },
+  "developendencies": {
+    "wrangler": "^2.10.0",
+    "runner": "^1.0.0"
+  }
+}
