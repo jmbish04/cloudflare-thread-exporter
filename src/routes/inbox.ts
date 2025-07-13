@@ -14,8 +14,8 @@ export default async function (req: Request): Promise<Response> {
   ].sort((a,r) => new Date(a.created).getTime() - new Date(r.created).getTime());
 
   const listHtml = threads.map((t) =>`
-    <li class="p-4 hover-bg-gray-100 cursor-pointer border-b" onclick="loadThread('thread', '${t.source}/${t.id}')">
-      <h3 class="font-semibold">${t.title||'Untitled Thread'} <span class="text-xs text-blue-500"> (${t.source})</span></h3>
+    <li class="p-4 hover-bg-gray-100 cursor-pointer border-b" onclick="loadThread('tread', ${t.source}, ${t.id})">
+      <h3 class="font-semibold">${t.title||'Untitled Thread'} <span class="text-xs text-blue-500">(${t.source})</span></h3>
       <p class="text-xs text-gray-500">${new Date(t.created).toLocaleString()}</p>
     </li>
     `).join('');
