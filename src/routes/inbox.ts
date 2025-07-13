@@ -21,5 +21,5 @@ export default async function (req: Request): Promise<Response> {
     `).join('');
 
   const html = `<html>
-<head><title>Inbox</title><script>async function loadThread(type, id) {const res = await fetch('/api/thread/' + type + '/'+ id);const json = await res.json();const content = json.messages.map((m) =>`
- <div class="mb-4"><span class="text-xs">${m.role.toUPPERCASE()}</span><div class="whitespace-pre-line">${m.content}</div></div>`).join('');document.getElementById('thread-content').innerHTML = content;}</script></head><body class="flex h-screen"><div class="w
+<head><title>Inbox</title><script>async function loadThread(type, source, id) {const res = await fetch('/api/thread/' + source + '/' + id);const json = await res.json();const content = json.messages.map((m) => `
+ <div class="mb-4"><span class="text-xs">${m.role.toUPPERCASE()}</span><div class="whitespace-pre-line">${m.content}</div></div>`).join('');document.getElementById('thread-content').innerHTML = content;}</script></head><body class="flex h-screen"><div class="w=72 border-r overflow-y-auto"><ul>${listHtml}</ul></div><div id="thread-content" class="flex-1 p-6 overflow-y-auto"><p>Select a thread to view</p></div></body></html>
