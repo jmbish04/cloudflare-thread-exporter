@@ -1,0 +1,12 @@
+name="cloudflare-thread-exporter"
+type = "web"
+environments = {
+  "production": {
+    "base_url": "./assets/"
+  },
+  "development": {
+    "base_url": "./assets/"
+  }
+}
+bind="src/index.ts"
+
