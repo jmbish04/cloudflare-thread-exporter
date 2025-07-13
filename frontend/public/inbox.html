@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Inbox</title>
+</head>
+<body class="flex min-h-screen h-screen">
+  <div class="flex-shink bord wfull bg-white dark:bg-gray-800">
+    <div class="width-[250px] bord-right overflow-scroll" id="thread-list">
+      <ul class="divider space-y-2" id="threads-container">
+        <li>Loading threads</li>
+      </ul>
+    </div>
+    <div class="flex-1 flex-col width-full flex-col bg-gray-100" id="thread-view">
+      <div id="thread-content" class="px-6 overflow-x-auto">
+        <p>No thread selected</p>
+      </div>
+    </div>
+  </div>
+</body>
